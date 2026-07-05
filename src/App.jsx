@@ -105,18 +105,19 @@ const CSE_PROJECTS = [
     link: "https://github.com/vkg06",
     tags: ["HTML", "CSS", "JS"]
   },
-  {
-    title: "Portfolio Website",
-    desc: "Developed a fully responsive portfolio website showcasing projects, skills, and achievements. Added smooth scrolling, dark mode support, and performance optimizations for faster page loads.",
-    link: "https://github.com/vkg06",
-    tags: ["HTML", "CSS", "JS"]
-  },
-  {
+    {
     title: "Tic-Tac-Toe",
     desc: "Created an interactive two-player game with real-time win detection and score tracking. Enhanced user experience through animations, responsive design, and intuitive gameplay mechanics.",
     link: "https://github.com/vkg06",
     tags: ["JS", "CSS"]
   },
+  {
+    title: "Portfolio Website",
+desc: "A modern, fully responsive portfolio showcasing my projects, technical skills, and experience. Built with smooth animations, dark mode, and optimized performance to deliver a fast and engaging user experience.",
+link: "https://github.com/vkg06",
+tags: ["React", "Tailwind CSS", "JavaScript"]
+  },
+
   {
     title: "E-commerce Clone",
     desc: "Designed a shopping platform featuring 50+ products with category-based filtering and cart management. Built a responsive checkout flow to simulate a real-world online shopping experience.",
@@ -128,7 +129,14 @@ const CSE_PROJECTS = [
   desc: "Designed and developed a secure backend platform for financial transaction processing using Node.js and MongoDB. Implemented JWT authentication, RBAC, Redis caching, and rate limiting. Optimized database queries and caching strategies to improve API performance and scalability under high load.",
   link: "https://github.com/vkg06",
   tags: ["Node.js", "Express", "MongoDB", "Redis"]
+  },
+  {
+    title: "MedKart (AI-Powered Online Pharmacy Platform)",
+    desc: "A full-stack AI-powered online pharmacy that digitizes handwritten prescriptions with Claude Vision OCR, enabling secure medicine ordering, prescription uploads, and real-time order tracking.",
+    link: "https://github.com/vkg06",
+    tags: ["MERN Stack", "AI Vision OCR", "MongoDB Atlas", "REST APIs"]
   }
+
 ];
 
 const ECE_PROJECTS = [
