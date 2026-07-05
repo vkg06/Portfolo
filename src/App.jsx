@@ -63,11 +63,26 @@ const SKILLS_DATA = [
 ];
 
 const TIMELINE = [
+  { year: "2020", title: "Top Performer — Mathematics (Class 12th)", org: "Senior Secondary School", desc: "Ranked as top performer in class for Mathematics in Class 12th, reflecting strong foundational analytical skills.", icon: "🧮" },
+  
+  { year: "2020-2022", title: "JEE Preparation", org: "Self-study / Coaching", desc: "Focused preparation for JEE Mains, building strong fundamentals in Mathematics and core engineering subjects.", icon: "📚" },
+  
+  { year: "2022", title: "SSB Interview — Shortlisted", org: "Services Selection Board", desc: "Cleared initial screening and appeared for the SSB interview process; gained valuable exposure to leadership and personality assessment.", icon: "🎖️" },
+  
+  { year: "2022", title: "Academic Scholarship — JEE Mains", org: "ABES Engineering College", desc: "Awarded a merit-based academic scholarship for B.Tech admission based on strong JEE Mains rank.", icon: "🏅" },
+  
   { year: "2022", title: "Started B.Tech ECE", org: "ABES Engineering College, Ghaziabad", desc: "Began Electronics & Communication Engineering with a focus on embedded systems and IoT.", icon: "🎓" },
+  
   { year: "2023", title: "Frontend Cert — Great Learning", org: "Great Learning Platform", desc: "Completed certified courses in Front End Development and CSS. Built first responsive portfolio.", icon: "📜" },
+  
+  { year: "2023", title: "Top 3 in Class — Mathematics", org: "ABES Engineering College", desc: "Ranked among the top 3 students in class for Mathematics during B.Tech, maintaining strong academic performance alongside technical projects.", icon: "📐" },
+  
   { year: "2023", title: "IoT & Embedded Systems Training", org: "ABES AICTE IDEA Lab", desc: "Hands-on training designing fire alarms, parking sensors, and microcontroller automation projects.", icon: "🔧" },
+  
   { year: "2024", title: "ROS Workshop", org: "INurture Foundation", desc: "Participated in robotics and wireless systems workshop, expanding real-time application skills.", icon: "🤖" },
+  
   { year: "2025", title: "Full Portfolio Launch", org: "Self-initiated", desc: "Launched professional developer portfolio showcasing CSE and ECE projects to global audience.", icon: "🚀" },
+  
   { year: "2026", title: "Quality Assurance Engineer", org: "Garg Associates Pvt. Ltd., Ghaziabad", desc: "Validating 500+ ERP records for wire & cable specs, designing test plans, maintaining BOM data, and preparing LQC & FAI reports while collaborating across engineering and production teams.", icon: "🏭" },
 ];
 
