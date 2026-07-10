@@ -88,6 +88,34 @@ const TIMELINE = [
 
 
 const EXPERIENCE = [
+{
+  role: "Web Development Intern",
+  company: "CodeCraft",
+  location: "Remote",
+  period: "Jul 2025 – Aug 2025",
+  type: "Internship",
+  icon: "💻",
+  metrics: [
+    { value: "5+", label: "Projects Delivered" },
+    { value: "10+", label: "Responsive Pages Built" },
+    { value: "15+", label: "UI Enhancements" },
+  ],
+  tags: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "Git",
+    "REST APIs",
+    "Responsive Design"
+  ],
+  points: [
+    "Built responsive and user-friendly web applications using HTML, CSS, JavaScript, and React.js.",
+    "Integrated REST APIs and implemented reusable UI components to improve application functionality.",
+    "Collaborated remotely using Git and GitHub, participating in code reviews and feature development.",
+    "Optimized website performance, fixed UI bugs, and ensured cross-browser compatibility in an Agile development environment."
+  ],
+},
   {
     role: "Quality Assurance Engineer",
     company: "Garg Associates Pvt. Ltd.",
