@@ -4,246 +4,19 @@ import GithubIcon from "./assets/github.png";
 import LinkedInIcon from "./assets/linkedin.png";
 import InstagramIcon from "./assets/ig.png";
 import Icon from "./assets/icon.jpg";
-/* ─── DATA ─────────────────────────────────────────── */
-const SKILLS_DATA = [
-  // Programming Languages
-  { name: "C", level: 85, cat: "Programming" },
-  { name: "C++", level: 88, cat: "Programming" },
-  { name: "Python", level: 85, cat: "Programming" },
-  { name: "JavaScript", level: 82, cat: "Programming" },
 
-  // Core Concepts
-  { name: "OOP", level: 85, cat: "Core CS" },
-  { name: "Data Structures & Algorithms", level: 85, cat: "Core CS" },
-  { name: "Machine Learning", level: 75, cat: "Core CS" },
-  { name: "Digital Signal Processing", level: 75, cat: "Core CS" },
-
-  // Backend
-  { name: "Node.js", level: 80, cat: "Backend" },
-  { name: "Express.js", level: 78, cat: "Backend" },
-  { name: "REST APIs", level: 82, cat: "Backend" },
-
-  // Embedded Systems
-  { name: "Arduino", level: 90, cat: "Embedded" },
-  { name: "ESP32", level: 85, cat: "Embedded" },
-  { name: "STM32", level: 75, cat: "Embedded" },
-  { name: "Interrupts", level: 80, cat: "Embedded" },
-  { name: "Optical Sensor Interfacing", level: 80, cat: "Embedded" },
-
-  // ML & AI
-  { name: "scikit-learn", level: 80, cat: "ML & AI" },
-  { name: "OpenCV", level: 82, cat: "ML & AI" },
-  { name: "SVM", level: 75, cat: "ML & AI" },
-  { name: "Random Forest", level: 75, cat: "ML & AI" },
-  { name: "FFT Feature Extraction", level: 70, cat: "ML & AI" },
-  { name: "OpenAI API", level: 75, cat: "ML & AI" },
-  { name: "LLM Integration", level: 72, cat: "ML & AI" },
-  { name: "Prompt Engineering", level: 80, cat: "ML & AI" },
-
-  // Databases
-  { name: "SQL", level: 80, cat: "Database" },
-  { name: "PostgreSQL", level: 75, cat: "Database" },
-  { name: "MongoDB", level: 82, cat: "Database" },
-  { name: "Redis", level: 78, cat: "Database" },
-
-  // Tools
-  { name: "Git", level: 85, cat: "Tools" },
-  { name: "Linux", level: 75, cat: "Tools" },
-  { name: "Docker", level: 70, cat: "Tools" },
-  { name: "Arduino IDE", level: 85, cat: "Tools" },
-  { name: "MATLAB / Simulink", level: 75, cat: "Tools" },
-  { name: "Postman", level: 80, cat: "Tools" },
-  { name: "MS Excel", level: 80, cat: "Tools" },
-
-
-  // Soft Skills
-  { name: "Communication", level: 85, cat: "Soft Skills" },
-  { name: "Team Collaboration", level: 90, cat: "Soft Skills" },
-  { name: "Analytical Thinking", level: 88, cat: "Soft Skills" },
-];
-
-const TIMELINE = [
-  { year: "2020", title: "Top Performer — Mathematics (Class 12th)", org: "Senior Secondary School", desc: "Ranked as top performer in class for Mathematics in Class 12th, reflecting strong foundational analytical skills.", icon: "🧮" },
-  
-  { year: "2020-2022", title: "JEE Preparation", org: "Self-study / Coaching", desc: "Focused preparation for JEE Mains, building strong fundamentals in Mathematics and core engineering subjects.", icon: "📚" },
-  
-  { year: "2022", title: "SSB Interview — Shortlisted", org: "Services Selection Board", desc: "Cleared initial screening and appeared for the SSB interview process; gained valuable exposure to leadership and personality assessment.", icon: "🎖️" },
-  
-  { year: "2022", title: "Academic Scholarship — JEE Mains", org: "ABES Engineering College", desc: "Awarded a merit-based academic scholarship for B.Tech admission based on strong JEE Mains rank.", icon: "🏅" },
-  
-  { year: "2022", title: "Started B.Tech ECE", org: "ABES Engineering College, Ghaziabad", desc: "Began Electronics & Communication Engineering with a focus on embedded systems and IoT.", icon: "🎓" },
-  
-  { year: "2023", title: "Frontend Cert — Great Learning", org: "Great Learning Platform", desc: "Completed certified courses in Front End Development and CSS. Built first responsive portfolio.", icon: "📜" },
-  
-  { year: "2023", title: "Top 3 in Class — Mathematics", org: "ABES Engineering College", desc: "Ranked among the top 3 students in class for Mathematics during B.Tech, maintaining strong academic performance alongside technical projects.", icon: "📐" },
-  
-  { year: "2023", title: "IoT & Embedded Systems Training", org: "ABES AICTE IDEA Lab", desc: "Hands-on training designing fire alarms, parking sensors, and microcontroller automation projects.", icon: "🔧" },
-  
-  { year: "2024", title: "ROS Workshop", org: "INurture Foundation", desc: "Participated in robotics and wireless systems workshop, expanding real-time application skills.", icon: "🤖" },
-  
-  { year: "2025", title: "Full Portfolio Launch", org: "Self-initiated", desc: "Launched professional developer portfolio showcasing CSE and ECE projects to global audience.", icon: "🚀" },
-  
-  { year: "2026", title: "Quality Assurance Engineer", org: "Garg Associates Pvt. Ltd., Ghaziabad", desc: "Validating 500+ ERP records for wire & cable specs, designing test plans, maintaining BOM data, and preparing LQC & FAI reports while collaborating across engineering and production teams.", icon: "🏭" },
-];
-
-
-const EXPERIENCE = [
-{
-  role: "Web Development Intern",
-  company: "CodeCraft",
-  location: "Remote",
-  period: "Jul 2025 – Aug 2025",
-  type: "Internship",
-  icon: "💻",
-  metrics: [
-    { value: "5+", label: "Projects Delivered" },
-    { value: "10+", label: "Responsive Pages Built" },
-    { value: "15+", label: "UI Enhancements" },
-  ],
-  tags: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React.js",
-    "Git",
-    "REST APIs",
-    "Responsive Design"
-  ],
-  points: [
-    "Built responsive and user-friendly web applications using HTML, CSS, JavaScript, and React.js.",
-    "Integrated REST APIs and implemented reusable UI components to improve application functionality.",
-    "Collaborated remotely using Git and GitHub, participating in code reviews and feature development.",
-    "Optimized website performance, fixed UI bugs, and ensured cross-browser compatibility in an Agile development environment."
-  ],
-},
-  {
-    role: "Quality Assurance Engineer",
-    company: "Garg Associates Pvt. Ltd.",
-    location: "Ghaziabad, UP",
-    period: "Jan 2026 – Present",
-    type: "Full-time",
-    icon: "🏭",
-    metrics: [
-      { value: "500+", label: "ERP Records Validated" },
-      { value: "100%", label: "Data Compliance" },
-      { value: "30+",  label: "Reports Prepared" },
-    ],
-    tags: ["ERP Systems", "Test Planning", "BOM Management",
-           "FAI Reports", "LQC", "ECN", "Quality Assurance"],
-    points: [
-      "Validated and managed 500+ ERP records for wire & cable specs, ensuring data integrity and compliance.",
-      "Designed structured test plans and executed validation workflows to identify defects and improve reliability.",
-      "Maintained BOM data and supported ECN implementation through controlled configuration management.",
-      "Prepared LQC and FAI reports while collaborating with engineering, production, and quality teams.",
-    ],
-  },
-];
-
-
-
-const CSE_PROJECTS = [
-  {
-    title: "To-Do App",
-    desc: "Built a task management application with task creation, editing, and priority tagging. Implemented drag-and-drop reordering and localStorage persistence to manage 500+ tasks seamlessly across sessions.",
-    link: "https://github.com/vkg06",
-    tags: ["HTML", "CSS", "JS"]
-  },
-    {
-    title: "Tic-Tac-Toe",
-    desc: "Created an interactive two-player game with real-time win detection and score tracking. Enhanced user experience through animations, responsive design, and intuitive gameplay mechanics.",
-    link: "https://github.com/vkg06",
-    tags: ["JS", "CSS"]
-  },
-  {
-    title: "Portfolio Website",
-desc: "A modern, fully responsive portfolio showcasing my projects, technical skills, and experience. Built with smooth animations, dark mode, and optimized performance to deliver a fast and engaging user experience.",
-link: "https://github.com/vkg06",
-tags: ["React", "Tailwind CSS", "JavaScript"]
-  },
-
-  {
-    title: "E-commerce Clone",
-    desc: "Designed a shopping platform featuring 50+ products with category-based filtering and cart management. Built a responsive checkout flow to simulate a real-world online shopping experience.",
-    link: "https://github.com/vkg06",
-    tags: ["HTML", "CSS", "JS"]
-  },
-  {
-    title: "Finance Backend System",
-  desc: "Designed and developed a secure backend platform for financial transaction processing using Node.js and MongoDB. Implemented JWT authentication, RBAC, Redis caching, and rate limiting. Optimized database queries and caching strategies to improve API performance and scalability under high load.",
-  link: "https://github.com/vkg06",
-  tags: ["Node.js", "Express", "MongoDB", "Redis"]
-  },
-  {
-    title: "MedKart (AI-Powered Online Pharmacy Platform)",
-    desc: "A full-stack AI-powered online pharmacy that digitizes handwritten prescriptions with Claude Vision OCR, enabling secure medicine ordering, prescription uploads, and real-time order tracking.",
-    link: "https://github.com/vkg06",
-    tags: ["MERN Stack", "AI Vision OCR", "MongoDB Atlas", "REST APIs"]
-  }
-
-];
-
-const ECE_PROJECTS = [
-  {
-    title: "Fire Alarm System",
-    desc: "Engineered an Arduino-based fire detection system using IR sensors for continuous monitoring. The system detects flames within seconds and triggers instant alarms to improve safety and response time.",
-    link: "https://github.com/vkg06",
-    tags: ["Arduino", "IoT", "C++"]
-  },
-  {
-    title: "Parking Module",
-    desc: "Developed a smart parking solution using ultrasonic sensors and microcontroller-based processing. The system monitors 20+ parking slots in real time and provides accurate occupancy detection.",
-    link: "https://github.com/vkg06",
-    tags: ["Arduino", "Sensors"]
-  },
-  {
-    title: "Driver Anti-Sleep Device",
-    desc: "Built a drowsiness detection system using computer vision and eye-tracking techniques. Achieved over 90% detection accuracy and generated immediate alerts to help prevent accidents.",
-    link: "https://github.com/vkg06",
-    tags: ["IoT", "Python", "CV"]
-  },
-  {
-    title: "IoT Traffic Controller",
-    desc: "Implemented an adaptive traffic management system powered by IoT and cloud connectivity. Monitors traffic density across multiple lanes and dynamically optimizes signal timing for smoother flow.",
-    link: "https://github.com/vkg06",
-    tags: ["IoT", "Cloud", "Arduino"]
-  },
-    {
-  title: "Biometric Attendance System",
-  desc: "Developed an end-to-end attendance management system using face recognition and fingerprint authentication. Achieved 97% face recognition accuracy across 50 enrolled users and integrated Arduino-based biometric hardware. Automated attendance tracking for 30+ students while maintaining reliable data storage and reporting.",
-  link: "https://github.com/vkg06",
-  tags: ["Python", "OpenCV", "Arduino", "ML"]
-}
-  
-];
-
-/*const CSE_PROJECTS = [
-  { title: "To-Do App", desc: "Task manager with localStorage persistence, drag-to-reorder, and priority tagging.", link: "https://github.com/vkg06", tags: ["HTML", "CSS", "JS"] },
-  { title: "Portfolio Website", desc: "Fully responsive personal portfolio with smooth scroll and dark theme.", link: "https://github.com/vkg06", tags: ["HTML", "CSS", "JS"] },
-  { title: "Tic-Tac-Toe", desc: "Two-player game with win detection, score tracking, and animated transitions.", link: "https://github.com/vkg06", tags: ["JS", "CSS"] },
-  { title: "E-commerce Clone", desc: "Mock shopping site with cart functionality, product filtering, and checkout UI.", link: "https://github.com/vkg06", tags: ["HTML", "CSS", "JS"] },
-];"""
-
-"""const ECE_PROJECTS = [
-  { title: "Fire Alarm System", desc: "IR sensor-based flame detection with real-time alarm for prompt hazard alerts.", link: "#", tags: ["Arduino", "IoT", "C++"] },
-  { title: "Parking Module", desc: "Ultrasonic sensor system for automated slot detection with MCU-based processing.", link: "#", tags: ["Arduino", "Sensors"] },
-  { title: "Driver Anti-Sleep Device", desc: "Drowsiness detection via eye-tracking with alarm/vibration safety alerts.", link: "#", tags: ["IoT", "Python", "CV"] },
-  { title: "IoT Traffic Controller", desc: "Cloud-connected adaptive traffic signal monitoring system.", link: "#", tags: ["IoT", "Cloud", "Arduino"] },
-];*/
-
-
-
-
-
-
-
-const STATS = [
-  { label: "Projects Built", value: 8, suffix: "+" },
-  { label: "Certificates", value: 4, suffix: "" },
-  { label: "Technologies", value: 12, suffix: "+" },
-  { label: "GitHub Repos", value: 10, suffix: "+" },
-];
-const NAV = ["Home", "About", "Skills", "Timeline", "Experience", "Projects", "Contact"];
-
+/* ─── API ──────────────────────────────────────────────
+   Points at the Express backend. Set VITE_API_URL in a
+   .env file at the root of your Vite project (same level
+   as vite.config.js) to override this, e.g.:
+     VITE_API_URL=http://localhost:5000/api
+   Falls back to localhost:5000 for local dev if unset.
+──────────────────────────────────────────────────────── */
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// Certificate images live in THIS project's public/certificates/ folder
+// (portfolio/public/certificates/), so Vite serves them directly from the
+// frontend's own origin — no need to route them through the backend.
+// data.js just needs to point at the filename, e.g. "/certificates/html.jpg".
 
 /* ─── HOOKS ─────────────────────────────────────────── */
 function useInView(threshold = 0.15) {
@@ -372,12 +145,17 @@ function BackToTop() {
 }
 
 /* ─── LOADING SCREEN ────────────────────────────────── */
-function LoadingScreen({ done }) {
+function LoadingScreen({ done, label }) {
   const [pct, setPct] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setPct(p => { if (p >= 100) { clearInterval(t); return 100; } return p + 4; }), 30);
+    // Animates smoothly but never claims 100% until the real data has arrived.
+    const t = setInterval(() => setPct(p => {
+      if (done) return 100;
+      if (p >= 92) return p;
+      return p + 4;
+    }), 30);
     return () => clearInterval(t);
-  }, []);
+  }, [done]);
   return (
     <div style={{
       position: "fixed", inset: 0, background: "#050a07", zIndex: 10000, display: "flex", flexDirection: "column",
@@ -392,14 +170,14 @@ function LoadingScreen({ done }) {
         <div style={{ height: "100%", width: `${pct}%`, background: "linear-gradient(90deg,#38bd78,#a3e9c2)", transition: "width .05s linear", borderRadius: 2 }} />
       </div>
       <span style={{ fontFamily: "'Space Grotesk',sans-serif", color: "rgba(255,255,255,0.3)", fontSize: 13, letterSpacing: 3 }}>
-        {pct < 100 ? "LOADING..." : "READY"}
+        {label || (pct < 100 ? "LOADING..." : "READY")}
       </span>
     </div>
   );
 }
 
 /* ─── NAVBAR ────────────────────────────────────────── */
-function NavBar({ active, theme, setTheme }) {
+function NavBar({ active, theme, setTheme, nav = [] }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
@@ -418,7 +196,7 @@ function NavBar({ active, theme, setTheme }) {
           VK<span style={{ color: "#38bd78" }}>.</span>
         </a>
         <ul style={{ display: "flex", gap: 32, listStyle: "none", margin: 0, padding: 0 }} className="nav-ul">
-          {NAV.map(n => (
+          {nav.map(n => (
             <li key={n}>
               <a href={`#${n.toLowerCase()}`} style={{
                 color: active === n.toLowerCase() ? "#38bd78" : (theme === "dark" ? "rgba(255,255,255,.65)" : "rgba(10,32,23,.7)"),
@@ -446,7 +224,7 @@ function NavBar({ active, theme, setTheme }) {
       </nav>
       {menuOpen && (
         <div style={{ position: "fixed", top: 70, left: 0, width: "100%", background: theme === "dark" ? "rgba(5,10,7,0.97)" : "rgba(240,248,243,0.98)", backdropFilter: "blur(20px)", zIndex: 998, padding: "24px 5vw 32px", borderBottom: "1px solid rgba(56,189,120,.1)" }}>
-          {NAV.map(n => (
+          {nav.map(n => (
             <a key={n} href={`#${n.toLowerCase()}`} onClick={() => setMenuOpen(false)} style={{ display: "block", padding: "14px 0", color: theme === "dark" ? "rgba(255,255,255,.75)" : "#0a2017", fontFamily: "'Space Grotesk',sans-serif", fontWeight: 500, fontSize: 16, textDecoration: "none", borderBottom: "1px solid rgba(56,189,120,.07)", letterSpacing: 1, textTransform: "uppercase" }}>{n}</a>
           ))}
         </div>
@@ -646,26 +424,26 @@ function Hero({ theme }) {
 }
 
 /* ─── ABOUT ─────────────────────────────────────────── */
-function About({ theme }) {
+function About({ theme, about }) {
   const [ref, inView] = useInView();
   const tc = theme === "dark";
+  const a = about || {}; // defensive default in case the fetch hasn't resolved yet
   return (
     <section id="about" ref={ref} style={{ padding: "120px 6vw", position: "relative", zIndex: 1 }}>
       <SectionTitle theme={theme}>About Me</SectionTitle>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 80, alignItems: "center" }} className="about-grid">
         <div style={{ transform: inView ? "translateX(0)" : "translateX(-40px)", opacity: inView ? 1 : 0, transition: "all .8s ease" }}>
           <div style={{ position: "relative", width: 280, height: 280, margin: "0 auto" }}>
-            <div style={{width:"100%",height:"100%",borderRadius:"30px 12px 30px 12px",background:"linear-gradient(135deg,rgba(56,189,120,.15),rgba(56,189,120,.03))",border:"1px solid rgba(56,189,120,.2)",overflow:"hidden"}}><img src={profileImg} alt="Vikas Gupta" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"30px 12px 30px 12px"}}/></div>
-            
+            <div style={{width:"100%",height:"100%",borderRadius:"30px 12px 30px 12px",background:"linear-gradient(135deg,rgba(56,189,120,.15),rgba(56,189,120,.03))",border:"1px solid rgba(56,189,120,.2)",overflow:"hidden"}}><img src={profileImg} alt={a.name || "Profile"} style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"30px 12px 30px 12px"}}/></div>
           </div>
         </div>
         <div style={{ transform: inView ? "translateX(0)" : "translateX(40px)", opacity: inView ? 1 : 0, transition: "all .8s .15s ease" }}>
   <p style={{ color: tc ? "rgba(255,255,255,.7)" : "rgba(10,32,23,.7)", fontSize: 16, lineHeight: 1.9, marginBottom: 28, fontFamily: "'Space Grotesk',sans-serif" }}>
-    Hi, I'm <span style={{ color: "#38bd78", fontWeight: 600 }}>Vikas Gupta</span> — a final-year Electronics & Communication Engineering student passionate about software engineering, embedded systems, artificial intelligence, and intelligent automation. I specialize in building end-to-end solutions that combine modern software development with real-world hardware integration.
+    {a.introBefore}<span style={{ color: "#38bd78", fontWeight: 600 }}>{a.name}</span>{a.introAfter}
   </p>
 
   <p style={{ color: tc ? "rgba(255,255,255,.5)" : "rgba(10,32,23,.5)", fontSize: 15, lineHeight: 1.9, marginBottom: 36, fontFamily: "'Space Grotesk',sans-serif" }}>
-    My expertise spans full-stack web development, machine learning, IoT, and embedded systems, with hands-on experience in technologies such as React, Node.js, Python, C++, Arduino, ESP32, OpenCV, and cloud-based AI tools. I enjoy transforming complex problems into efficient, scalable, and user-centric solutions while continuously exploring emerging technologies.
+    {a.description}
   </p>
         </div>
       </div>
@@ -674,116 +452,96 @@ function About({ theme }) {
   );
 }
 
-/* ─── STATS ─────────────────────────────────────────── */
-function StatCard({ label, value, suffix, theme, inView }) {
-  const count = useCounter(value, inView);
-  return (
-    <div style={{
-      textAlign: "center", padding: "32px 20px", borderRadius: 20,
-      background: theme === "dark" ? "rgba(56,189,120,.05)" : "rgba(56,189,120,.06)",
-      border: "1px solid rgba(56,189,120,.15)",
-      transition: "all .3s",
-    }}
-      onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(56,189,120,.4)"; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 20px 50px rgba(56,189,120,.1)"; }}
-      onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(56,189,120,.15)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
-      <div style={{ fontFamily: "'Syne',sans-serif", fontSize: 48, fontWeight: 800, color: "#38bd78", lineHeight: 1 }}>{count}{suffix}</div>
-      <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 13, color: theme === "dark" ? "rgba(255,255,255,.45)" : "rgba(10,32,23,.5)", marginTop: 8, letterSpacing: 1, textTransform: "uppercase" }}>{label}</div>
-    </div>
-  );
-}
+
 
 /* ─── SKILLS ─────────────────────────────────────────── */
-function Skills({ theme }) {
+function Skills({ theme, skills = []}) {
   const [ref, inView] = useInView();
-  const [filter, setFilter] = useState("All");
-  const cats = [
-  "All",
-  "Programming",
-  "Core CS",
-  "Backend",
-  "Embedded",
-  "ML & AI",
-  "Database",
-  "Tools",
-  "Soft Skills"
-];
-  const filtered = filter === "All" ? SKILLS_DATA : SKILLS_DATA.filter(s => s.cat === filter);
   const tc = theme === "dark";
+  // Fixed order — every skill's `cat` in data.js must match one of these keys.
+  // `label`/`icon`/`desc` are purely presentational, so the data file can stay
+  // short while the UI still reads as polished, labeled sections.
+  const groups = [
+    {
+      key: "SDE", icon: "💻", label: "Software Engineering",
+      desc: "Languages, frameworks, and tooling for building and shipping applications.",
+    },
+    {
+      key: "ECE Core", icon: "🔧", label: "Embedded Systems & Electronics",
+      desc: "Hardware, microcontrollers, and signal processing from my ECE background.",
+    },
+    {
+      key: "Data Science", icon: "📊", label: "Data Science & AI",
+      desc: "Machine learning, data tooling, and applied AI/LLM work.",
+    },
+  ];
   return (
     <section id="skills" ref={ref} style={{ padding: "120px 6vw", position: "relative", zIndex: 1 }}>
       <SectionTitle theme={theme}>Skills</SectionTitle>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto 60px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: 16 }}>
-            {STATS.map((s, i) => (
-              <div key={s.label} style={{ transform: inView ? "translateY(0)" : "translateY(24px)", opacity: inView ? 1 : 0, transition: `all .5s ${i * .1}s ease` }}>
-                <StatCard {...s} theme={theme} inView={inView} />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap", marginBottom: 48 }}>
-          {cats.map(c => (
-            <button key={c} onClick={() => setFilter(c)} style={{
-              padding: "9px 22px", borderRadius: 50, cursor: "pointer",
-              fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 13, letterSpacing: .5,
-              background: filter === c ? "#38bd78" : "transparent",
-              color: filter === c ? "#050a07" : (tc ? "rgba(255,255,255,.55)" : "rgba(10,32,23,.55)"),
-              border: `1.5px solid ${filter === c ? "#38bd78" : "rgba(56,189,120,.2)"}`,
-              transition: "all .25s",
-            }}>{c}</button>
-          ))}
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(320px,1fr))", gap: 20 }}>
-          {filtered.map((s, i) => (
-            <div key={s.name} style={{ padding: "20px 24px", borderRadius: 16, background: tc ? "rgba(255,255,255,.03)" : "rgba(10,32,23,.04)", border: "1px solid rgba(56,189,120,.1)", transform: inView ? "translateY(0)" : "translateY(20px)", opacity: inView ? 1 : 0, transition: `all .5s ${i * .08}s ease` }}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
-                <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 15, color: tc ? "rgba(255,255,255,.85)" : "#0a2017" }}>{s.name}</span>
-                <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 13, color: "#38bd78", fontWeight: 700 }}>{inView ? s.level : 0}%</span>
-              </div>
-              <div style={{ height: 7, background: tc ? "rgba(255,255,255,.07)" : "rgba(10,32,23,.1)", borderRadius: 4, overflow: "hidden" }}>
-                <div style={{ height: "100%", width: inView ? `${s.level}%` : "0%", background: "linear-gradient(90deg,#38bd78,#a3e9c2)", borderRadius: 4, transition: `width 1.2s ${i * .08 + .2}s cubic-bezier(.17,.67,.41,1.1)` }} />
-              </div>
-              <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 11, color: "rgba(56,189,120,.7)", letterSpacing: 1, textTransform: "uppercase", marginTop: 8, display: "block" }}>{s.cat}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+        
 
-/* ─── TIMELINE ──────────────────────────────────────── */
-function Timeline({ theme }) {
-  const [ref, inView] = useInView(0.1);
-  const tc = theme === "dark";
-  return (
-    <section id="timeline" ref={ref} style={{ padding: "120px 6vw", position: "relative", zIndex: 1 }}>
-      <SectionTitle theme={theme}>Journey</SectionTitle>
-      <div style={{ maxWidth: 750, margin: "0 auto", position: "relative" }}>
-        <div style={{ position: "absolute", left: 22, top: 0, bottom: 0, width: 2, background: "rgba(56,189,120,.15)", borderRadius: 1 }} />
-        {TIMELINE.map((item, i) => (
-          <div key={i} style={{ display: "flex", gap: 28, marginBottom: 44, transform: inView ? "translateX(0)" : "translateX(-30px)", opacity: inView ? 1 : 0, transition: `all .6s ${i * .12}s ease` }}>
-            <div style={{ flexShrink: 0, width: 46, height: 46, borderRadius: "50%", background: tc ? "rgba(56,189,120,.1)" : "rgba(56,189,120,.12)", border: "2px solid rgba(56,189,120,.4)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, boxShadow: "0 0 20px rgba(56,189,120,.15)", position: "relative", zIndex: 1 }}>
-              {item.icon}
-            </div>
-            <div style={{ flex: 1, paddingTop: 8 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 12, color: "#38bd78", fontWeight: 700, letterSpacing: 1.5, background: "rgba(56,189,120,.1)", padding: "3px 10px", borderRadius: 20 }}>{item.year}</span>
-                <h3 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 17, color: tc ? "#fff" : "#0a2017", margin: 0 }}>{item.title}</h3>
+        {groups.map((g, gi) => {
+          const items = skills.filter(s => s.cat === g.key);
+          if (!items.length) return null;
+          return (
+            <div key={g.key} style={{ marginBottom: gi < groups.length - 1 ? 56 : 0 }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 16, marginBottom: 24 }}>
+                <div style={{
+                  width: 46, height: 46, borderRadius: 14, flexShrink: 0,
+                  background: "rgba(56,189,120,.1)", border: "1.5px solid rgba(56,189,120,.3)",
+                  display: "flex", alignItems: "center", justifyContent: "center", fontSize: 21,
+                }}>{g.icon}</div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+                    <h3 style={{
+                      fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 19,
+                      color: tc ? "#fff" : "#0a2017", margin: 0,
+                    }}>{g.label}</h3>
+                    <span style={{
+                      fontFamily: "'Space Grotesk',sans-serif", fontSize: 11, fontWeight: 700,
+                      color: "#38bd78", background: "rgba(56,189,120,.1)",
+                      padding: "3px 10px", borderRadius: 20, letterSpacing: .5,
+                    }}>{items.length} skills</span>
+                  </div>
+                  <p style={{
+                    fontFamily: "'Space Grotesk',sans-serif", fontSize: 13.5,
+                    color: tc ? "rgba(255,255,255,.4)" : "rgba(10,32,23,.45)",
+                    margin: "6px 0 0", lineHeight: 1.6,
+                  }}>{g.desc}</p>
+                </div>
               </div>
-              <p style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 13, color: "#38bd78", margin: "0 0 8px", fontWeight: 500 }}>{item.org}</p>
-              <p style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 14, color: tc ? "rgba(255,255,255,.5)" : "rgba(10,32,23,.55)", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", paddingLeft: 62 }} className="skills-pill-row">
+                {items.map((s, i) => (
+                  <span key={s.name} style={{
+                    display: "inline-flex", alignItems: "center", gap: 8,
+                    padding: "11px 20px", borderRadius: 50,
+                    background: tc ? "rgba(255,255,255,.04)" : "rgba(10,32,23,.04)",
+                    border: "1px solid rgba(56,189,120,.18)",
+                    fontFamily: "'Space Grotesk',sans-serif", fontWeight: 600, fontSize: 14,
+                    color: tc ? "rgba(255,255,255,.85)" : "#0a2017",
+                    transform: inView ? "translateY(0) scale(1)" : "translateY(14px) scale(.96)",
+                    opacity: inView ? 1 : 0, transition: `all .45s ${i * .03}s ease, border-color .2s, background .2s, transform .2s`,
+                    cursor: "default",
+                  }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = "#38bd78"; e.currentTarget.style.background = "rgba(56,189,120,.1)"; e.currentTarget.style.transform = "translateY(-3px) scale(1.03)"; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(56,189,120,.18)"; e.currentTarget.style.background = tc ? "rgba(255,255,255,.04)" : "rgba(10,32,23,.04)"; e.currentTarget.style.transform = "translateY(0) scale(1)"; }}>
+                    <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#38bd78", boxShadow: "0 0 8px rgba(56,189,120,.8)", flexShrink: 0 }} />
+                    {s.name}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+      <style>{`@media(max-width:640px){.skills-pill-row{padding-left:0!important}}`}</style>
     </section>
   );
 }
 
 /* ─── EXPERIENCE ───────────────────────────────────── */
-function Experience({ theme }) {
+function Experience({ theme, experience = [] }) {
   const [ref, inView] = useInView(0.1);
   const tc = theme === "dark";
 
@@ -793,7 +551,7 @@ function Experience({ theme }) {
       <SectionTitle theme={theme}>Experience</SectionTitle>
 
       <div style={{ maxWidth:960, margin:"0 auto" }}>
-        {EXPERIENCE.map((exp, i) => (
+        {experience.map((exp, i) => (
           <div key={exp.role} style={{
             transform: inView ? "translateY(0)" : "translateY(40px)",
             opacity: inView ? 1 : 0,
@@ -922,7 +680,7 @@ function Experience({ theme }) {
                         color:"#38bd78", fontSize:11, fontWeight:700,
                         flexShrink:0, marginTop:3,
                       }}>✓</span>
-                      <span dangerouslySetInnerHTML={{__html: pt}} />
+                      <span>{pt}</span>
                     </li>
                   ))}
                 </ul>
@@ -990,10 +748,10 @@ function ProjCard({ title, desc, link, tags, i, theme }) {
 }
 
 /* ─── PROJECTS ──────────────────────────────────────── */
-function Projects({ theme }) {
+function Projects({ theme, cseProjects = [], eceProjects = [] }) {
   const [tab, setTab] = useState("cse");
   const tc = theme === "dark";
-  const proj = tab === "cse" ? CSE_PROJECTS : ECE_PROJECTS;
+  const proj = tab === "cse" ? cseProjects : eceProjects;
   return (
     <section id="projects" style={{ padding: "120px 6vw", position: "relative", zIndex: 1 }}>
       <SectionTitle theme={theme}>Projects</SectionTitle>
@@ -1013,6 +771,105 @@ function Projects({ theme }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 20 }}>
           {proj.map((p, i) => <ProjCard key={p.title} {...p} i={i} theme={theme} />)}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── CERT MEDIA (image / pdf / broken-link debug view) ── */
+function CertMedia({ fileUrl, isPdf, title }) {
+  const [broken, setBroken] = useState(false);
+
+  if (!fileUrl) {
+    return (
+      <div style={{ height: 180, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(56,189,120,.06)", fontSize: 36 }}>🏆</div>
+    );
+  }
+
+  if (isPdf) {
+    return (
+      <a href={fileUrl} target="_blank" rel="noreferrer" style={{
+        height: 180, display: "flex", flexDirection: "column", gap: 8,
+        alignItems: "center", justifyContent: "center",
+        background: "rgba(56,189,120,.06)", textDecoration: "none",
+      }}>
+        <span style={{ fontSize: 34 }}>📄</span>
+        <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 12, fontWeight: 700, color: "#38bd78", letterSpacing: 1, textTransform: "uppercase" }}>View PDF</span>
+      </a>
+    );
+  }
+
+  if (broken) {
+    // Visible instead of silently disappearing, so you can see exactly
+    // which URL failed and fix the filename/path in data.js.
+    return (
+      <div style={{
+        height: 180, display: "flex", flexDirection: "column", gap: 6,
+        alignItems: "center", justifyContent: "center", padding: "0 16px",
+        background: "rgba(220,60,60,.08)", textAlign: "center",
+      }}>
+        <span style={{ fontSize: 26 }}>⚠️</span>
+        <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 11, fontWeight: 700, color: "#e05a5a", letterSpacing: .5 }}>
+          Image not found
+        </span>
+        <span style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 10, color: "rgba(224,90,90,.7)", wordBreak: "break-all" }}>
+          {fileUrl}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <a href={fileUrl} target="_blank" rel="noreferrer" style={{ display: "block" }}>
+      <img
+        src={fileUrl}
+        alt={title}
+        loading="lazy"
+        style={{ width: "100%", height: 180, objectFit: "cover", display: "block", cursor: "zoom-in" }}
+        onError={() => { console.warn("Certificate image failed to load (check portfolio/public/certificates/):", fileUrl); setBroken(true); }}
+      />
+    </a>
+  );
+}
+
+/* ─── CERTIFICATES ──────────────────────────────────── */
+function Certificates({ theme, certificates = [] }) {
+  const [ref, inView] = useInView(0.1);
+  const tc = theme === "dark";
+  return (
+    <section id="certificates" ref={ref} style={{ padding: "120px 6vw", position: "relative", zIndex: 1 }}>
+      <SectionTitle theme={theme}>Certificates</SectionTitle>
+      <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 20 }}>
+        {certificates.map((c, i) => {
+          const isPdf = c.image && c.image.toLowerCase().endsWith(".pdf");
+          const fileUrl = c.image ? encodeURI(c.image) : null;
+          return (
+          <div key={c.title + i} style={{
+            borderRadius: 20, overflow: "hidden",
+            background: tc ? "rgba(255,255,255,.025)" : "rgba(10,32,23,.03)",
+            border: "1px solid rgba(56,189,120,.12)",
+            transform: inView ? "translateY(0)" : "translateY(20px)",
+            opacity: inView ? 1 : 0, transition: `all .5s ${i * .08}s ease`,
+            display: "flex", flexDirection: "column",
+          }}>
+            <CertMedia fileUrl={fileUrl} isPdf={isPdf} title={c.title} />
+            <div style={{ padding: "22px 24px 26px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <h4 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 17, color: tc ? "#fff" : "#0a2017", margin: 0 }}>{c.title}</h4>
+              <p style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 14, color: "#38bd78", fontWeight: 600, margin: 0 }}>{c.issuer}</p>
+              <p style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 12, color: tc ? "rgba(255,255,255,.4)" : "rgba(10,32,23,.45)", margin: 0, letterSpacing: 1, textTransform: "uppercase" }}>{c.date}</p>
+              {c.credentialUrl ? (
+                <a href={c.credentialUrl} target="_blank" rel="noreferrer" style={{
+                  color: "#38bd78", fontFamily: "'Space Grotesk',sans-serif", fontSize: 13, fontWeight: 700,
+                  textDecoration: "none", letterSpacing: 1, textTransform: "uppercase",
+                  display: "flex", alignItems: "center", gap: 6, marginTop: 4, width: "fit-content",
+                }}>
+                  Verify <span>→</span>
+                </a>
+              ) : null}
+            </div>
+          </div>
+          );
+        })}
       </div>
     </section>
   );
@@ -1166,20 +1023,48 @@ function Footer({ theme }) {
 export default function App() {
   const [theme, setTheme] = useState("dark");
   const [active, setActive] = useState("home");
-  const [loaded, setLoaded] = useState(false);
+  const [portfolio, setPortfolio] = useState(null); // fetched from backend
+  const [fetchError, setFetchError] = useState(null);
   const tc = theme === "dark";
 
+  // Fetch all portfolio content from the backend once on mount.
   useEffect(() => {
-    const t = setTimeout(() => setLoaded(true), 2200);
-    return () => clearTimeout(t);
+    let cancelled = false;
+    fetch(`${API_BASE}/portfolio`)
+      .then(res => {
+        if (!res.ok) throw new Error(`API responded with ${res.status}`);
+        return res.json();
+      })
+      .then(json => { if (!cancelled) setPortfolio(json); })
+      .catch(err => { if (!cancelled) setFetchError(err.message); });
+    return () => { cancelled = true; };
   }, []);
 
+  const loaded = !!portfolio || !!fetchError;
+
   useEffect(() => {
+    if (!loaded) return;
     const sections = document.querySelectorAll("section[id]");
     const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }), { threshold: 0.35 });
     sections.forEach(s => obs.observe(s));
     return () => obs.disconnect();
   }, [loaded]);
+
+  if (fetchError) {
+    return (
+      <div style={{
+        minHeight: "100vh", display: "flex", flexDirection: "column", gap: 12,
+        alignItems: "center", justifyContent: "center", background: "#050a07", color: "#fff",
+        fontFamily: "'Space Grotesk',sans-serif", padding: 24, textAlign: "center",
+      }}>
+        <div style={{ fontSize: 18, color: "#38bd78", fontWeight: 700 }}>Couldn't reach the API</div>
+        <div style={{ color: "rgba(255,255,255,.5)", fontSize: 14, maxWidth: 420 }}>
+          {fetchError}. Make sure the backend server is running (npm start in portfolio-backend)
+          and reachable at {API_BASE}.
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ background: tc ? "#050a07" : "#f4faf7", minHeight: "100vh", overflowX: "hidden", transition: "background .4s ease" }}>
@@ -1193,17 +1078,19 @@ export default function App() {
       <ScrollProgress />
       <Particles />
       <CursorSpotlight />
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <NavBar active={active} theme={theme} setTheme={setTheme} />
-        <Hero theme={theme} />
-        <About theme={theme} />
-        <Skills theme={theme} />
-        <Timeline theme={theme} />
-        <Experience theme={theme} />
-        <Projects theme={theme} />
-        <Contact theme={theme} />
-        <Footer theme={theme} />
-      </div>
+      {portfolio && (
+        <div style={{ position: "relative", zIndex: 1 }}>
+          <NavBar active={active} theme={theme} setTheme={setTheme} nav={portfolio.nav} />
+          <Hero theme={theme} />
+          <About theme={theme} about={portfolio.about} />
+          <Skills theme={theme} skills={portfolio.skills} />
+          <Experience theme={theme} experience={portfolio.experience} />
+          <Projects theme={theme} cseProjects={portfolio.cseProjects} eceProjects={portfolio.eceProjects} />
+          <Certificates theme={theme} certificates={portfolio.certificates} />
+          <Contact theme={theme} />
+          <Footer theme={theme} />
+        </div>
+      )}
       <BackToTop />
     </div>
   );
