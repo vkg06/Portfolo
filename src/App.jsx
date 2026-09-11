@@ -239,7 +239,7 @@ function NavBar({ active, theme, setTheme, nav = [] }) {
 
 /* ─── HERO ──────────────────────────────────────────── */
 function Hero({ theme }) {
-  const words = ["QA Engineer.", "ECE Engineer.", "IoT Enthusiast.", "Problem Solver."];
+  const words = ["Full Stack Developer.", "Software Developer.", "ECE Engineer.", "AI Enthusiast."];
   const [wi, setWi] = useState(0);
   const [ci, setCi] = useState(0);
   const [del, setDel] = useState(false);
@@ -263,13 +263,6 @@ function Hero({ theme }) {
 
       {/* ── LEFT: text ── */}
       <div style={{ maxWidth: 580, flex: 1 }}>
-
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 22, animation: "vfadeUp .7s .1s both" }}>
-          <div style={{ width: 40, height: 2, background: "#38bd78", borderRadius: 1 }} />
-          <span style={{ fontFamily: "'Space Grotesk',sans-serif", color: "#38bd78", fontSize: 12, letterSpacing: 4, textTransform: "uppercase", fontWeight: 600 }}>
-            QA Engineer & ECE Developer
-          </span>
-        </div>
 
         <h1 style={{
           fontFamily: "'Syne',sans-serif",
@@ -297,9 +290,8 @@ function Hero({ theme }) {
           fontSize: 16, lineHeight: 1.9, maxWidth: 500, marginBottom: 40,
           animation: "vfadeUp .7s .5s both", fontFamily: "'Space Grotesk',sans-serif",
         }}>
-          B.Tech ECE student at ABES Engineering College & QA Engineer at
-          Garg Associates. Bridging software with hardware — from IoT systems
-          to ERP validation.
+          B.Tech ECE graduate and QA Engineer with experience in full-stack development, Python, REST APIs, databases, and AI-powered applications.
+
         </p>
 
         {/* CTA buttons */}
@@ -322,7 +314,7 @@ function Hero({ theme }) {
           }}
             onMouseEnter={e => { e.currentTarget.style.background = "rgba(56,189,120,.08)"; e.currentTarget.style.borderColor = "#38bd78"; }}
             onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "rgba(56,189,120,.5)"; }}>
-            Hire Me →
+            Contact Me →
           </a>
         </div>
 
@@ -373,7 +365,7 @@ function Hero({ theme }) {
 
         {/* image frame */}
         <div style={{
-          width: 320, height: 390,
+          width: 400, height: 470,
           borderRadius: "38% 62% 55% 45% / 45% 45% 55% 55%",
           overflow: "hidden",
           border: "2px solid rgba(56,189,120,.3)",
@@ -384,30 +376,6 @@ function Hero({ theme }) {
             width: "100%", height: "100%",
             objectFit: "cover", objectPosition: "center top", display: "block",
           }} />
-        </div>
-
-        {/* floating badge — top left */}
-        <div style={{
-          position: "absolute", top: 28, left: -50, zIndex: 2,
-          background: theme === "dark" ? "rgba(5,10,7,.88)" : "rgba(240,248,243,.95)",
-          backdropFilter: "blur(14px)",
-          border: "1px solid rgba(56,189,120,.25)", borderRadius: 14,
-          padding: "10px 16px", animation: "float 3s ease-in-out infinite",
-          boxShadow: "0 8px 28px rgba(0,0,0,.2)",
-        }}>
-          <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 10, color: "#38bd78", fontWeight: 700, letterSpacing: 1.2, textTransform: "uppercase" }}>QA Engineer</div>
-          <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 12, color: theme === "dark" ? "rgba(255,255,255,.75)" : "#0a2017", marginTop: 3, fontWeight: 500 }}>Garg Associates</div>
-        </div>
-
-        {/* floating badge — bottom right */}
-        <div style={{
-          position: "absolute", bottom: 36, right: -44, zIndex: 2,
-          background: "#38bd78", borderRadius: 14,
-          padding: "10px 18px",
-          boxShadow: "0 8px 32px rgba(56,189,120,.5)",
-          animation: "float 3s 1.5s ease-in-out infinite",
-        }}>
-          <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 11, color: "#050a07", fontWeight: 700, letterSpacing: 1, whiteSpace: "nowrap" }}>Open to Work ✓</div>
         </div>
 
       </div>

@@ -19,19 +19,14 @@ const about = {
 
 };
 
-const stats = [
-  { label: "Projects Built", value: 8, suffix: "+" },
-  { label: "Certificates", value: 4, suffix: "" },
-  { label: "Technologies", value: 12, suffix: "+" },
-  { label: "GitHub Repos", value: 10, suffix: "+" },
-];
+
  
 // `cat` now only ever takes one of three values so the Skills section can
 // render as three fixed groups instead of a filterable tag cloud:
 // "SDE", "ECE Core", "Data Science".
 const skills = [
+
   // ── SDE ──
-  { name: "C", cat: "SDE" },
   { name: "C++", cat: "SDE" },
   { name: "Python", cat: "SDE" },
   { name: "JavaScript", cat: "SDE" },
@@ -44,10 +39,7 @@ const skills = [
   { name: "Linux", cat: "SDE" },
   { name: "Docker", cat: "SDE" },
   { name: "Postman", cat: "SDE" },
-  { name: "Communication", cat: "SDE" },
-  { name: "Team Collaboration", cat: "SDE" },
-  { name: "Analytical Thinking", cat: "SDE" },
- 
+
   // ── ECE Core ──
   { name: "Digital Signal Processing", cat: "ECE Core" },
   { name: "Arduino", cat: "ECE Core" },
@@ -57,7 +49,7 @@ const skills = [
   { name: "Optical Sensor Interfacing", cat: "ECE Core" },
   { name: "Arduino IDE", cat: "ECE Core" },
   { name: "MATLAB / Simulink", cat: "ECE Core" },
- 
+
   // ── Data Science ──
   { name: "Machine Learning", cat: "Data Science" },
   { name: "scikit-learn", cat: "Data Science" },
@@ -67,12 +59,12 @@ const skills = [
   { name: "FFT Feature Extraction", cat: "Data Science" },
   { name: "OpenAI API", cat: "Data Science" },
   { name: "LLM Integration", cat: "Data Science" },
-  { name: "Prompt Engineering", cat: "Data Science" },
   { name: "SQL", cat: "Data Science" },
   { name: "PostgreSQL", cat: "Data Science" },
   { name: "MongoDB", cat: "Data Science" },
   { name: "Redis", cat: "Data Science" },
   { name: "MS Excel", cat: "Data Science" },
+
 ];
  
 const experience = [
@@ -248,7 +240,14 @@ const certificates = [
     credentialUrl: "",
     image: "/certificates/technology-job-simulation.jpg",
   },
+  {
+    title: "Py-Quest: Python Intermediate Challenge",
+    issuer: "RANKUP",
+    date: "September 2026",
+    credentialUrl: "",
+    image: "/certificates/python.jpg",
+  },
 ];
  
-module.exports = { nav, about, stats, skills, experience, cseProjects, eceProjects, certificates };
+module.exports = { nav, about, skills, experience, cseProjects, eceProjects, certificates };
  
